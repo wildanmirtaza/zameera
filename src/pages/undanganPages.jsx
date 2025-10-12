@@ -240,7 +240,7 @@ function App() {
                 style={{
                     backgroundImage: `url(${isMobile ? backgroundhp2 : backgroundpc2})`,
                     // backgroundSize: 'cover',
-                    backgroundSize: '100%',
+                    backgroundSize: '125%',
                     backgroundPosition: 'center',
                 }}
             >
@@ -363,7 +363,7 @@ function App() {
                                 animate="visible"
                             >
                                 <p>Rabu, 29 Oktober 2025</p>
-                                <p>Majesty Palace, Griptha Hotel Kudus</p>
+                                <p>Hotel Griptha Kudus</p>
                             </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
@@ -430,8 +430,7 @@ function App() {
                                         viewport={{ once: true, amount: 0.2 }}
                                     >
                                         <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Venue</h2>
-                                        <p className="text-white mt-3">Majesty Palace</p>
-                                        <p className="text-white mt-3">Griptha Hotel Kudus</p>
+                                        <p className="text-white mt-3">Hotel Griptha Kudus</p>
                                         <p className="text-white font-semibold mt-3"></p>
                                         <div className="animate-zoom-in">
                                             <iframe
