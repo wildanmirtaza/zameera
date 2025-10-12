@@ -333,30 +333,6 @@ function App() {
                                 animate="visible"
                             />
                             <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
                                 variants={fadeIn}
                                 initial="hidden"
@@ -380,6 +356,14 @@ function App() {
                                 animate="visible"
                             >
                                 <p>Dresscode</p>
+                                <p>???</p>
+                            </motion.div>
+                            <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
                                 <p></p>
                             </motion.div>
                             <motion.div
