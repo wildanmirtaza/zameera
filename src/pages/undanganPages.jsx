@@ -602,7 +602,7 @@ function App() {
           <button
             type="button"
             onClick={submitReservation}
-            className="bg-white-300/60 hover:bg-white-800/60 border-1 border-white-400 text-white-300 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 w-full sm:w-auto cursor-pointer hover:scale-105"
+            className="bg-black-300/60 hover:bg-white-800/60 border-1 border-white-400 text-yellow-300 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 w-full sm:w-auto cursor-pointer hover:scale-105"
           >
             Konfirmasi
           </button>
