@@ -240,7 +240,7 @@ function App() {
                 style={{
                     backgroundImage: `url(${isMobile ? backgroundhp2 : backgroundpc2})`,
                     // backgroundSize: 'cover',
-                    backgroundSize: '128%',
+                    backgroundSize: '150%',
                     backgroundPosition: 'center',
                 }}
             >
@@ -296,7 +296,7 @@ function App() {
                             </motion.div>
                             <motion.button
                                 onClick={() => setIsOpened(true)}
-                                className="bg-yellow text-black font-semibold text-lg px-6 py-3 rounded-full shadow-md flex items-center gap-3 hover:bg-yellow-600 transition z-20 font-poppins cursor-pointer"
+                                className="bg-white text-black font-semibold text-lg px-6 py-3 rounded-full shadow-md flex items-center gap-3 hover:bg-yellow-600 transition z-20 font-poppins cursor-pointer"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
