@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/hero-app.png";
+import logo from "../assets/zameeralogo.png";
 import invitoo from "../assets/invitoo.png";
 import sponsor from "../assets/sponsor.png";
 import backgroundpc from "../assets/backgroundpc.png";
@@ -14,8 +14,9 @@ import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { QRCode, message } from "antd";
 import backgroundpc2 from "../assets/backgroundpc2.png";
-import backgroundhp2 from "../assets/bg-app-hp.webp";
+import backgroundhp2 from "../assets/output.webp";
 import artis from "../assets/artis.png";
+import cundamani from "../assets/hero.png";
 
 function App() {
     const navigate = useNavigate();
@@ -38,7 +39,7 @@ function App() {
 
     const [isOpened, setIsOpened] = useState(false);
 
-    const targetDate = "2025-07-05T18:00:00";
+    const targetDate = "2025-10-29T18:00:00";
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -255,6 +256,14 @@ function App() {
                             <motion.img
                                 src={logo}
                                 alt="Logo"
+                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                variants={scaleIn}
+                                initial="hidden"
+                                animate="visible"
+                            />
+                            <motion.img
+                                src={cundamani}
+                                alt="Cundamani"
                                 className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
                                 variants={scaleIn}
                                 initial="hidden"
