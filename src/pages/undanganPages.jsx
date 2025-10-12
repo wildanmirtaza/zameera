@@ -240,7 +240,7 @@ function App() {
                 style={{
                     backgroundImage: `url(${isMobile ? backgroundhp2 : backgroundpc2})`,
                     // backgroundSize: 'cover',
-                    backgroundSize: '150%',
+                    backgroundSize: '100%',
                     backgroundPosition: 'center',
                 }}
             >
@@ -325,8 +325,8 @@ function App() {
                                 animate="visible"
                             />
                             <motion.img
-                                src={sponsor}
-                                alt="Sponsor"
+                                src={cundamani}
+                                alt="Cundamani"
                                 className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
                                 variants={scaleIn}
                                 initial="hidden"
@@ -362,8 +362,8 @@ function App() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                <p>Sabtu, 5 Juli 2025</p>
-                                <p>Alun-Alun Simpang 7 Kudus</p>
+                                <p>Rabu, 29 Oktober 2025</p>
+                                <p>Majesty Palace, Griptha Hotel Kudus</p>
                             </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
@@ -380,32 +380,8 @@ function App() {
                                 animate="visible"
                             >
                                 <p>Dresscode</p>
-                                <p>Etnik/Batik</p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
                                 <p></p>
                             </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-                            <motion.img
-                                src={artis}
-                                alt="Artis"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
-                                variants={scaleIn}
-                                initial="hidden"
-                                animate="visible"
-                            />
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
                                 variants={fadeIn}
@@ -454,11 +430,12 @@ function App() {
                                         viewport={{ once: true, amount: 0.2 }}
                                     >
                                         <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Venue</h2>
-                                        <p className="text-white mt-3">Alun-Alun Simpang 7 Kudus</p>
+                                        <p className="text-white mt-3">Majesty Palace</p>
+                                        <p className="text-white mt-3">Griptha Hotel Kudus</p>
                                         <p className="text-white font-semibold mt-3"></p>
                                         <div className="animate-zoom-in">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3955.0784547356473!2d110.8417464421937!3d-6.807802809170903!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7123c740504c15%3A0x5c953c221017d9c6!2sMarker%20Location!5e0!3m2!1sen!2sid!4v1627990606581!5m2!1sen!2sid"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.4401786576673!2d110.81930907480874!3d-6.837711893160353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c462f7684b91%3A0x2757715038b21140!2sHotel%20Griptha!5e0!3m2!1sen!2sid!4v1760291436832!5m2!1sen!2sid"
                                                 width="100%"
                                                 height="300"
                                                 style={{ border: 0, borderRadius: "10px" }}
