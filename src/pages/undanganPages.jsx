@@ -339,8 +339,7 @@ function App() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                <p>Rabu, 29 Oktober 2025</p>
-                                <p>Hotel Griptha Kudus</p>
+                                <p>29 Oktober 2025</p>
                             </motion.div>
                             <motion.img
                                 src={gueststar}
