@@ -17,6 +17,7 @@ import backgroundpc2 from "../assets/backgroundpc2.png";
 import backgroundhp2 from "../assets/output.webp";
 import artis from "../assets/artis.png";
 import cundamani from "../assets/hero.png";
+import gueststar from "../assets/gueststar.png";
 
 function App() {
     const navigate = useNavigate();
@@ -327,6 +328,14 @@ function App() {
                             <motion.img
                                 src={cundamani}
                                 alt="Cundamani"
+                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                variants={scaleIn}
+                                initial="hidden"
+                                animate="visible"
+                            />
+                            <motion.img
+                                src={gueststar}
+                                alt="Gueststar"
                                 className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
                                 variants={scaleIn}
                                 initial="hidden"
