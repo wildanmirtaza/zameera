@@ -333,14 +333,6 @@ function App() {
                                 initial="hidden"
                                 animate="visible"
                             />
-                            <motion.img
-                                src={gueststar}
-                                alt="Gueststar"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
-                                variants={scaleIn}
-                                initial="hidden"
-                                animate="visible"
-                            />
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
                                 variants={fadeIn}
@@ -350,31 +342,14 @@ function App() {
                                 <p>Rabu, 29 Oktober 2025</p>
                                 <p>Hotel Griptha Kudus</p>
                             </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
+                            <motion.img
+                                src={gueststar}
+                                alt="Gueststar"
+                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins font-semibold"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p>Dresscode</p>
-                                <p>???</p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
+                            />
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
                                 variants={fadeIn}
