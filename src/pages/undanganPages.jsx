@@ -40,7 +40,7 @@ function App() {
 
     const [isOpened, setIsOpened] = useState(false);
 
-    const targetDate = "2025-10-29T18:00:00";
+    const targetDate = "2025-10-29T17:00:00";
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -340,6 +340,7 @@ function App() {
                                 animate="visible"
                             >
                                 <p>29 Oktober 2025</p>
+                                <p>17.00 - 23.00</p>
                             </motion.div>
                             <motion.img
                                 src={gueststar}
