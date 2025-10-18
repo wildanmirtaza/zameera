@@ -1,13 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from "framer-motion";
-import backgroundpc from "../assets/backgroundpc.png";
-import backgroundhp from "../assets/backgroundhp.png";
+import { useState, useEffect, useRef } from 'react';
 import { Popconfirm, message, Modal } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons';
-import backgroundpc2 from "../assets/backgroundpc2.png";
-import backgroundhp2 from "../assets/backgroundhp2.png";
 import backgroundAdmin from "../assets/backgroundAdmin.jpg";
-import { MdQrCodeScanner } from 'react-icons/md';
 import { TbChecklist } from 'react-icons/tb';
 import { LuClipboardList } from 'react-icons/lu';
 import { IoPeopleSharp } from 'react-icons/io5';
@@ -386,13 +380,6 @@ const AdminGuestList = () => {
                     backgroundPosition: 'center',
                 }}
             >
-                {/* <motion.img
-                    src={isMobile ? backgroundhp : backgroundpc}
-                    alt="Background"
-                    className="absolute inset-0 w-full h-auto object-cover opacity-75 pointer-events-none"
-                    initial={{ scale: 1.2 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                /> */}
                 <div className="p-6 bg-gradient-to-l from-white-900/20 to-white-800/20 text-black font-sriracha rounded-xl shadow-lg max-w-4xl mx-auto mt-10 z-20 border-1 border-black">
                     <h1 className="text-3xl font-bold text-black text-center mb-6">{selectedMenu}</h1>
                     {selectedMenu === "Daftar Tamu" && (

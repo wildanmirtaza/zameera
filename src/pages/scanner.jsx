@@ -1,20 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from "framer-motion";
-import backgroundpc from "../assets/backgroundpc.png";
-import backgroundhp from "../assets/backgroundhp.png";
-import { Popconfirm, message, Modal } from 'antd';
+import { message, Modal } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons';
-import backgroundpc2 from "../assets/backgroundpc2.png";
-import backgroundhp2 from "../assets/backgroundhp2.png";
 import backgroundAdmin from "../assets/backgroundAdmin.png";
-import { MdQrCodeScanner } from 'react-icons/md';
-import { TbChecklist } from 'react-icons/tb';
-import { LuClipboardList } from 'react-icons/lu';
-import { IoPeopleSharp } from 'react-icons/io5';
-import { FiPlus } from 'react-icons/fi';
-import { IoIosSend } from 'react-icons/io';
-import { RxCross2 } from 'react-icons/rx';
-import { v4 as uuidv4 } from 'uuid';
 
 const AdminGuestList = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);

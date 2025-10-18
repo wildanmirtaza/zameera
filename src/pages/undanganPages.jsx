@@ -1,23 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/zameeralogo.png";
-import invitoo from "../assets/invitoo.png";
-import sponsor from "../assets/sponsor.png";
-import backgroundpc from "../assets/backgroundpc.png";
-import backgroundhp from "../assets/backgroundhp4.png";
-import imgGallery1 from "../assets/imgGallery1.png";
-import imgGallery2 from "../assets/imgGallery2.png";
-import imgGallery3 from "../assets/imgGallery3.png";
-import imgGallery4 from "../assets/imgGallery4.png";
-import logoEnter from "../assets/EnterManagementKudus-logo.png";
+import logo from "../assets/zameeralogo.webp";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { QRCode, message } from "antd";
-import backgroundpc2 from "../assets/backgroundpc2.png";
-import backgroundhp2 from "../assets/output.webp";
-import artis from "../assets/artis.png";
-import cundamani from "../assets/hero.png";
-import gueststar from "../assets/gueststar.png";
+import backgroundhp2 from "../assets/Black and Gold Bokeh Sparkle Thanks For Watching Mobile Video.webm";
+import cundamani from "../assets/hero.webp";
+import gueststar from "../assets/gueststar.webp";
 
 function App() {
     const navigate = useNavigate();
@@ -82,7 +71,7 @@ function App() {
     };
 
     const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, transition: { duration: 1 } },
     };
 
@@ -109,29 +98,29 @@ function App() {
     };
 
 
-  const galleryItemAnimation = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: (i) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, delay: i * 0.5 },
-    }),
-  };
+    const galleryItemAnimation = {
+        hidden: { opacity: 0, scale: 0.9 },
+        visible: (i) => ({
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 0.5, delay: i * 0.5 },
+        }),
+    };
 
     const staggerContainer = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
 
     const scaleUp = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
-  };
+        hidden: { opacity: 0, scale: 0 },
+        visible: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
+    };
 
     const [guestCount, setGuestCount] = useState('');
     const [attendance, setAttendance] = useState('');
@@ -236,15 +225,17 @@ function App() {
 
 
 
-            <div
-                className="relative h-screen w-screen overflow-hidden text-white font-sriracha"
-                style={{
-                    backgroundImage: `url(${isMobile ? backgroundhp2 : backgroundpc2})`,
-                    // backgroundSize: 'cover',
-                    backgroundSize: '125%',
-                    backgroundPosition: 'center',
-                }}
-            >
+            <div className="relative h-screen w-screen overflow-hidden text-white font-sriracha">
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                >
+                    <source src={backgroundhp2} type="video/webm" />
+                    Your browser does not support the video tag.
+                </video>
                 <AnimatePresence>
                     {!isOpened && (
                         <motion.div
@@ -383,61 +374,61 @@ function App() {
                             >
                                 <p>Countdown</p>
                             </motion.div>
-                                    {timerComponents.length ? (
-                                        <motion.div
-                                            className="flex  gap-2 text-lg"
-                                            variants={fadeIn}
+                            {timerComponents.length ? (
+                                <motion.div
+                                    className="flex  gap-2 text-lg"
+                                    variants={fadeIn}
+                                >
+                                    {Object.entries(timeLeft).map(([key, value]) => (
+                                        <div
+                                            key={key}
+                                            className="flex flex-col items-center bg-white/20 rounded-lg p-2 sm:p-4 shadow-inner w-16 h-16 sm:w-24 sm:h-24"
                                         >
-                                            {Object.entries(timeLeft).map(([key, value]) => (
-                                                <div
-                                                    key={key}
-                                                    className="flex flex-col items-center bg-white/20 rounded-lg p-2 sm:p-4 shadow-inner w-16 h-16 sm:w-24 sm:h-24"
-                                                >
-                                                    <span className="text-2xl sm:text-4xl font-bold text-white">{value}</span>
-                                                    <span className="text-xs sm:text-sm font-medium uppercase text-gray-300 mt-1 sm:mt-2">
-                                                        {key}
-                                                    </span>
-                                                </div>
-                                            ))}
-                                        </motion.div>
-                                    ) : (
-                                        <motion.p
-                                            className="text-center text-lg sm:text-xl text-yellow-200 font-semibold mt-6"
-                                            variants={fadeIn}
-                                        >
-                                            Acara Sudah Dimulai!
-                                        </motion.p>
-                                    )}
-                                    <motion.div
-                                        className="text-center"
-                                        variants={{
-                                            hidden: { opacity: 0, y: 20 },
-                                            visible: {
-                                                opacity: 1,
-                                                y: 100,
-                                                transition: { duration: 0.5, delay: 0.2 }
-                                            },
-                                        }}
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
-                                        <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Venue</h2>
-                                        <p className="text-white mt-3">Hotel Griptha Kudus</p>
-                                        <p className="text-white font-semibold mt-3"></p>
-                                        <div className="animate-zoom-in">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.4401786576673!2d110.81930907480874!3d-6.837711893160353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c462f7684b91%3A0x2757715038b21140!2sHotel%20Griptha!5e0!3m2!1sen!2sid!4v1760291436832!5m2!1sen!2sid"
-                                                width="100%"
-                                                height="300"
-                                                style={{ border: 0, borderRadius: "10px" }}
-                                                allowFullScreen=""
-                                                loading="lazy"
-                                                title="Google Maps Location"
-                                            ></iframe>
+                                            <span className="text-2xl sm:text-4xl font-bold text-white">{value}</span>
+                                            <span className="text-xs sm:text-sm font-medium uppercase text-gray-300 mt-1 sm:mt-2">
+                                                {key}
+                                            </span>
                                         </div>
-                                        <p className="text-white font-semibold mt-3"></p>
-                                    </motion.div>
+                                    ))}
+                                </motion.div>
+                            ) : (
+                                <motion.p
+                                    className="text-center text-lg sm:text-xl text-yellow-200 font-semibold mt-6"
+                                    variants={fadeIn}
+                                >
+                                    Acara Sudah Dimulai!
+                                </motion.p>
+                            )}
+                            <motion.div
+                                className="text-center"
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: {
+                                        opacity: 1,
+                                        y: 100,
+                                        transition: { duration: 0.5, delay: 0.2 }
+                                    },
+                                }}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Venue</h2>
+                                <p className="text-white mt-3">Hotel Griptha Kudus</p>
+                                <p className="text-white font-semibold mt-3"></p>
+                                <div className="animate-zoom-in">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.4401786576673!2d110.81930907480874!3d-6.837711893160353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c462f7684b91%3A0x2757715038b21140!2sHotel%20Griptha!5e0!3m2!1sen!2sid!4v1760291436832!5m2!1sen!2sid"
+                                        width="100%"
+                                        height="300"
+                                        style={{ border: 0, borderRadius: "10px" }}
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        title="Google Maps Location"
+                                    ></iframe>
+                                </div>
+                                <p className="text-white font-semibold mt-3"></p>
+                            </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
                                 variants={fadeIn}
@@ -446,77 +437,77 @@ function App() {
                             >
                                 <p></p>
                             </motion.div>
-    <motion.div
-      className="relative mt-10 p-8 rounded-xl text-white max-w-3xl mx-auto z-20"
-      variants={fadeIn}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-    >
                             <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
+                                className="relative mt-10 p-8 rounded-xl text-white max-w-3xl mx-auto z-20"
                                 variants={fadeIn}
                                 initial="hidden"
-                                animate="visible"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
                             >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
-                            </motion.div>
-      <motion.h2
-        className="text-3xl font-bold text-yellow-400 mb-8 text-center tracking-wider"
-        variants={fadeIn}
-      >
-      </motion.h2>
+                                <motion.div
+                                    className="mb-8 text-lg space-y-1 font-poppins"
+                                    variants={fadeIn}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                    <p></p>
+                                </motion.div>
+                                <motion.div
+                                    className="mb-8 text-lg space-y-1 font-poppins"
+                                    variants={fadeIn}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                    <p></p>
+                                </motion.div>
+                                <motion.div
+                                    className="mb-8 text-lg space-y-1 font-poppins"
+                                    variants={fadeIn}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                    <p></p>
+                                </motion.div>
+                                <motion.h2
+                                    className="text-3xl font-bold text-yellow-400 mb-8 text-center tracking-wider"
+                                    variants={fadeIn}
+                                >
+                                </motion.h2>
 
-      <motion.div
-        className="text-center text-white mb-6"
-        variants={fadeIn}
-      >
-        <p className="text-xl">QR Code</p>
-        <p className="text-2xl font-semibold text-yellow-300">
-          {decodedString}
-        </p>
-      </motion.div>
+                                <motion.div
+                                    className="text-center text-white mb-6"
+                                    variants={fadeIn}
+                                >
+                                    <p className="text-xl">QR Code</p>
+                                    <p className="text-2xl font-semibold text-yellow-300">
+                                        {decodedString}
+                                    </p>
+                                </motion.div>
 
-      <motion.div
-        className="flex justify-center"
-        variants={fadeIn}
-      >
-        <div className="relative group bg-gradient-to-r from-white-400 to-white-600 p-1 rounded-2xl shadow-lg">
-          <div className="bg-white p-2 rounded-xl transition-transform duration-300 group-hover:scale-105">
-<QRCode
-  value={slug}
-  renderAs="canvas"
-  size={isMobile ? 240 : 300}
-  level="H"
-  fgColor="#000000"
-  bgColor="#FFFFFF"
-/>
-          </div>
-        </div>
-      </motion.div>
+                                <motion.div
+                                    className="flex justify-center"
+                                    variants={fadeIn}
+                                >
+                                    <div className="relative group bg-gradient-to-r from-white-400 to-white-600 p-1 rounded-2xl shadow-lg">
+                                        <div className="bg-white p-2 rounded-xl transition-transform duration-300 group-hover:scale-105">
+                                            <QRCode
+                                                value={slug}
+                                                renderAs="canvas"
+                                                size={isMobile ? 240 : 300}
+                                                level="H"
+                                                fgColor="#000000"
+                                                bgColor="#FFFFFF"
+                                            />
+                                        </div>
+                                    </div>
+                                </motion.div>
 
-      <motion.p
-        className="text-center text-gray-300 mt-6"
-        variants={fadeIn}
-      >
-      </motion.p>
-    </motion.div>
+                                <motion.p
+                                    className="text-center text-gray-300 mt-6"
+                                    variants={fadeIn}
+                                >
+                                </motion.p>
+                            </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
                                 variants={fadeIn}
