@@ -239,7 +239,7 @@ function App() {
                 <AnimatePresence>
                     {!isOpened && (
                         <motion.div
-                            className="absolute inset-0 flex flex-col items-center text-center p-6"
+                            className="absolute inset-0 flex flex-col items-center text-center p-6 lg:p-2"
                             variants={fadeInUp}
                             initial="hidden"
                             animate="visible"
@@ -248,7 +248,7 @@ function App() {
                             <motion.img
                                 src={logo}
                                 alt="Logo"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10 lg:mb-2"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
@@ -256,13 +256,13 @@ function App() {
                             <motion.img
                                 src={cundamani}
                                 alt="Cundamani"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10 lg:mb-2"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
                             />
                             <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
+                                className="mb-8 lg:mb-2 text-lg space-y-1 font-poppins"
                                 variants={fadeIn}
                                 initial="hidden"
                                 animate="visible"
