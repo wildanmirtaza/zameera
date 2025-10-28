@@ -7,11 +7,12 @@ import { QRCode, message } from "antd";
 import backgroundhp2 from "../assets/Black and Gold Bokeh Sparkle Thanks For Watching Mobile Video.webm";
 import cundamani from "../assets/hero.webp";
 import gueststar from "../assets/gueststar.webp";
+import { baseUrl } from "../config/apiConfig";
 
 function App() {
     const navigate = useNavigate();
     const { slug } = useParams();
-    const decodedString = atob(slug);
+    // const decodedString = atob(slug);
 
     const [messageApi, contextHolder] = message.useMessage();
     const [isMobile, setIsMobile] = useState(false);
@@ -122,76 +123,77 @@ function App() {
         visible: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
     };
 
-    const [guestCount, setGuestCount] = useState('');
-    const [attendance, setAttendance] = useState('');
+    // const [guestCount, setGuestCount] = useState('');
+    // const [attendance, setAttendance] = useState('');
 
 
-    const submitReservation = async () => {
-        // Data untuk dikirim ke API
-        const reservationData = {
-            name: decodedString,
-            guestCount: parseInt(guestCount, 10),
-            attendance,
-        };
+    // const submitReservation = async () => {
+    //     // Data untuk dikirim ke API
+    //     const reservationData = {
+    //         name: decodedString,
+    //         guestCount: parseInt(guestCount, 10),
+    //         attendance,
+    //     };
 
-        // Validasi data
-        if (!reservationData.guestCount || !reservationData.attendance) {
-            messageApi.error('Semua data wajib diisi!');
-            return;
-        }
+    //     // Validasi data
+    //     if (!reservationData.guestCount || !reservationData.attendance) {
+    //         messageApi.error('Semua data wajib diisi!');
+    //         return;
+    //     }
 
-        try {
-            const response = await fetch('https://rakevserver.space/reservasi', {
-                method: 'POST', // Tetap menggunakan POST untuk mendukung create dan update
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(reservationData),
-            });
+    //     try {
+    //         const response = await fetch('https://rakevserver.space/reservasi', {
+    //             method: 'POST', // Tetap menggunakan POST untuk mendukung create dan update
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(reservationData),
+    //         });
 
-            if (!response.ok) {
-                throw new Error('Gagal mengirim reservasi');
-            }
+    //         if (!response.ok) {
+    //             throw new Error('Gagal mengirim reservasi');
+    //         }
 
-            const result = await response.json();
-            console.log('Reservasi berhasil:', result);
-            messageApi.info(result.message);
-        } catch (error) {
-            console.error('Terjadi kesalahan saat mengirim reservasi:', error);
-            messageApi.error('Terjadi kesalahan. Coba lagi.');
-        }
-    };
+    //         const result = await response.json();
+    //         console.log('Reservasi berhasil:', result);
+    //         messageApi.info(result.message);
+    //     } catch (error) {
+    //         console.error('Terjadi kesalahan saat mengirim reservasi:', error);
+    //         messageApi.error('Terjadi kesalahan. Coba lagi.');
+    //     }
+    // };
 
 
 
-    const fetchReservasi = async () => {
-        try {
-            const response = await fetch('https://rakevserver.space/reservasi', {
-                method: 'GET',
-            });
+    // const fetchReservasi = async () => {
+    //     try {
+    //         const response = await fetch('https://rakevserver.space/reservasi', {
+    //             method: 'GET',
+    //         });
 
-            if (!response.ok) {
-                throw new Error('Gagal mengambil data reservasi');
-            }
+    //         if (!response.ok) {
+    //             throw new Error('Gagal mengambil data reservasi');
+    //         }
 
-            const data = await response.json();
+    //         const data = await response.json();
 
-            // Cari data yang sesuai dengan decodedString
-            const existingData = data.find((item) => item.name === decodedString);
+    //         // Cari data yang sesuai dengan decodedString
+    //         const existingData = data.find((item) => item.name === decodedString);
 
-            if (existingData) {
-                setGuestCount(existingData.guestCount); // Set nilai awal jumlah tamu
-                setAttendance(existingData.attendance); // Set nilai awal kehadiran
-            }
-        } catch (error) {
-            console.error('Error fetching reservasi:', error);
-        }
-    };
+    //         if (existingData) {
+    //             setGuestCount(existingData.guestCount); // Set nilai awal jumlah tamu
+    //             setAttendance(existingData.attendance); // Set nilai awal kehadiran
+    //         }
+    //     } catch (error) {
+    //         console.error('Error fetching reservasi:', error);
+    //     }
+    // };
+
+    const [dataTamu, setDataTamu] = useState("");
 
     const fetchGuest = async () => {
-
         try {
-            const response = await fetch('https://rakevserver.space/tamu', {
+            const response = await fetch(`${baseUrl}/api/guest`, {
                 method: 'GET',
             });
 
@@ -201,12 +203,17 @@ function App() {
 
             const data = await response.json();
 
-            // Cari data yang sesuai dengan decodedString
-            const existingData = data.find((item) => item.name === decodedString);
+            // Cari data yang sesuai dengan slug
+            const existingData = data.find((item) => item.code === slug);
 
             if (!existingData) {
                 navigate('/404'); // Redirect ke halaman 404 jika data tidak ditemukan
+                return;
             }
+
+            // Simpan data guest ke state
+            setDataTamu(existingData);
+
         } catch (error) {
             console.error('Error fetching reservasi:', error);
         }
@@ -214,7 +221,7 @@ function App() {
 
 
     useEffect(() => {
-        fetchReservasi();
+        // fetchReservasi();
         fetchGuest();
     }, []);
 
@@ -275,7 +282,7 @@ function App() {
                                         WebkitTextStroke: "0.25px #d8c600",
                                     }}
                                 >
-                                    {decodedString}
+                                    {dataTamu.nama}
                                 </p>
                             </motion.div>
                             <motion.div
@@ -480,7 +487,7 @@ function App() {
                                 >
                                     <p className="text-xl">QR Code</p>
                                     <p className="text-2xl font-semibold text-yellow-300">
-                                        {decodedString}
+                                        {dataTamu.nama}
                                     </p>
                                 </motion.div>
 
