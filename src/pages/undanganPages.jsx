@@ -389,6 +389,14 @@ function App() {
                                 <p></p>
                             </motion.div>
                             <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins font-semibold"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <p></p>
+                            </motion.div>
+                            <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins"
                                 variants={fadeIn}
                                 initial="hidden"
@@ -493,20 +501,46 @@ function App() {
                                 <p></p>
                             </motion.div>
                             <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
+                                className="relative mt-10 p-8 rounded-xl text-white max-w-3xl mx-auto z-20"
                                 variants={fadeIn}
                                 initial="hidden"
-                                animate="visible"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
                             >
-                                <p></p>
-                            </motion.div>
-                            <motion.div
-                                className="mb-8 text-lg space-y-1 font-poppins"
-                                variants={fadeIn}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <p></p>
+                                <motion.div
+                                    className="mb-8 text-lg space-y-1 font-poppins"
+                                    variants={fadeIn}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                    <p></p>
+                                </motion.div>
+                                <motion.div
+                                    className="mb-8 text-lg space-y-1 font-poppins"
+                                    variants={fadeIn}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                    <p></p>
+                                </motion.div>
+                                <motion.div
+                                    className="mb-8 text-lg space-y-1 font-poppins"
+                                    variants={fadeIn}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                    <p></p>
+                                </motion.div>
+                                <motion.h2
+                                    className="text-3xl font-bold text-yellow-400 mb-8 text-center tracking-wider"
+                                    variants={fadeIn}
+                                >
+                                </motion.h2>
+                                <motion.p
+                                    className="text-center text-gray-300 mt-6"
+                                    variants={fadeIn}
+                                >
+                                </motion.p>
                             </motion.div>
                         </motion.div>
                     )}
