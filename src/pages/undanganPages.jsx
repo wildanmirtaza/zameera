@@ -339,14 +339,30 @@ function App() {
                             animate="visible"
                             exit="exit"
                         >
+                            <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <p></p>
+                            </motion.div>
                             <motion.img
                                 src={logo}
                                 alt="Logo"
-                                className="w-[40vw] sm:w-[20vw] md:w-[15vw] lg:w-[15vw] mb-5"
+                                className="w-[20vw] sm:w-[10vw] md:w-[15vw] lg:w-[15vw] mb-5"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
                             />
+                            <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <p></p>
+                            </motion.div>
                             <motion.img
                                 src={cundamani}
                                 alt="Cundamani"
@@ -361,17 +377,9 @@ function App() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                <p>29 Oktober 2025</p>
-                                <p>17.00 - 23.00</p>
+                                <p>Minggu, 9 November 2025</p>
+                                <p>18.00 - Selesai</p>
                             </motion.div>
-                            <motion.img
-                                src={gueststar}
-                                alt="Gueststar"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
-                                variants={scaleIn}
-                                initial="hidden"
-                                animate="visible"
-                            />
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
                                 variants={fadeIn}
@@ -379,7 +387,7 @@ function App() {
                                 animate="visible"
                             >
                                 <p>Dresscode</p>
-                                <p>Cundamani by Zameera</p>
+                                <p>Glamor</p>
                             </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
@@ -445,11 +453,11 @@ function App() {
                                 viewport={{ once: true, amount: 0.2 }}
                             >
                                 <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Venue</h2>
-                                <p className="text-white mt-3">Hotel Griptha Kudus</p>
+                                <p className="text-white mt-3">Alun-Alun Simpang 7 Kudus</p>
                                 <p className="text-white font-semibold mt-3"></p>
                                 <div className="animate-zoom-in">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.4401786576673!2d110.81930907480874!3d-6.837711893160353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c462f7684b91%3A0x2757715038b21140!2sHotel%20Griptha!5e0!3m2!1sen!2sid!4v1760291436832!5m2!1sen!2sid"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.687434825251!2d110.8391463748085!3d-6.807823293189664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c4cf454fe3a7%3A0x317958e142471f1b!2sKudus%20Town%20Square!5e0!3m2!1sen!2sid!4v1762372110114!5m2!1sen!2sid"
                                         width="100%"
                                         height="300"
                                         style={{ border: 0, borderRadius: "10px" }}
@@ -504,35 +512,6 @@ function App() {
                                     variants={fadeIn}
                                 >
                                 </motion.h2>
-
-                                <motion.div
-                                    className="text-center text-white mb-6"
-                                    variants={fadeIn}
-                                >
-                                    <p className="text-xl">QR Code</p>
-                                    <p className="text-2xl font-semibold text-yellow-300">
-                                        {dataTamu.nama}
-                                    </p>
-                                </motion.div>
-
-                                <motion.div
-                                    className="flex justify-center"
-                                    variants={fadeIn}
-                                >
-                                    <div className="relative group bg-gradient-to-r from-white-400 to-white-600 p-1 rounded-2xl shadow-lg">
-                                        <div className="bg-white p-2 rounded-xl transition-transform duration-300 group-hover:scale-105">
-                                            <QRCode
-                                                value={slug}
-                                                renderAs="canvas"
-                                                size={isMobile ? 240 : 300}
-                                                level="H"
-                                                fgColor="#000000"
-                                                bgColor="#FFFFFF"
-                                            />
-                                        </div>
-                                    </div>
-                                </motion.div>
-
                                 <motion.p
                                     className="text-center text-gray-300 mt-6"
                                     variants={fadeIn}
