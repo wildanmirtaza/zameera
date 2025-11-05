@@ -378,7 +378,7 @@ function App() {
                                 animate="visible"
                             >
                                 <p>Minggu, 9 November 2025</p>
-                                <p>18.00 - Selesai</p>
+                                <p>18.00 WIB - Selesai</p>
                             </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
