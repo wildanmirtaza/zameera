@@ -4,7 +4,7 @@ import logo from "../assets/zameeralogo.webp";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { QRCode, message } from "antd";
-import backgroundhp2 from "../assets/Black and Gold Bokeh Sparkle Thanks For Watching Mobile Video.webm";
+import backgroundhp2 from "../assets/background.jpg";
 import cundamani from "../assets/hero.webp";
 import gueststar from "../assets/gueststar.webp";
 import { baseUrl } from "../config/apiConfig";
