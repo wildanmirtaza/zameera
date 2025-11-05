@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/zameeralogo.webp";
+import logo from "../assets/aems.png";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { QRCode, message } from "antd";
-import backgroundhp2 from "../assets/background.jpg";
-import cundamani from "../assets/hero.webp";
+import backgroundhp2 from "../assets/Black and Gold Bokeh Sparkle Thanks For Watching Mobile Video.webm";
+import cundamani from "../assets/tlmg.png";
 import gueststar from "../assets/gueststar.webp";
 import { baseUrl } from "../config/apiConfig";
 
@@ -255,7 +255,7 @@ function App() {
                             <motion.img
                                 src={logo}
                                 alt="Logo"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10 lg:mb-2"
+                                className="w-[20vw] sm:w-[10vw] md:w-[15vw] lg:w-[15vw] mb-5 lg:mb-1"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
