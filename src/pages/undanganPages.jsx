@@ -309,6 +309,14 @@ function App() {
                             >
                                 <p></p>
                             </motion.div>
+                            <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <p></p>
+                            </motion.div>
                             <motion.button
                                 onClick={() => setIsOpened(true)}
                                 className="bg-white text-black font-semibold text-lg px-6 py-3 rounded-full shadow-md flex items-center gap-3 hover:bg-yellow-600 transition z-20 font-poppins cursor-pointer"
@@ -334,7 +342,7 @@ function App() {
                             <motion.img
                                 src={logo}
                                 alt="Logo"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                className="w-[40vw] sm:w-[20vw] md:w-[15vw] lg:w-[15vw] mb-5"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
@@ -342,7 +350,7 @@ function App() {
                             <motion.img
                                 src={cundamani}
                                 alt="Cundamani"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10"
+                                className="w-[100vw] sm:w-[50vw] md:w-[30vw] lg:w-[30vw] mb-10"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
