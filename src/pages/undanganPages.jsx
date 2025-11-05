@@ -4,7 +4,7 @@ import logo from "../assets/aems.png";
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { QRCode, message } from "antd";
-import backgroundhp2 from "../assets/Black and Gold Bokeh Sparkle Thanks For Watching Mobile Video.webm";
+import backgroundhp2 from "../assets/background.webm";
 import cundamani from "../assets/tlmg.png";
 import gueststar from "../assets/gueststar.webp";
 import { baseUrl } from "../config/apiConfig";
@@ -30,7 +30,7 @@ function App() {
 
     const [isOpened, setIsOpened] = useState(false);
 
-    const targetDate = "2025-10-29T17:00:00";
+    const targetDate = "2025-11-09T18:00:00";
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -260,10 +260,18 @@ function App() {
                                 initial="hidden"
                                 animate="visible"
                             />
+                                                        <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <p></p>
+                            </motion.div>
                             <motion.img
                                 src={cundamani}
                                 alt="Cundamani"
-                                className="w-[80vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] mb-10 lg:mb-2"
+                                className="w-[100vw] sm:w-[50vw] md:w-[30vw] lg:w-[30vw] mb-10 lg:mb-2"
                                 variants={scaleIn}
                                 initial="hidden"
                                 animate="visible"
