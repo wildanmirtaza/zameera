@@ -459,6 +459,14 @@ function App() {
                                 initial="hidden"
                                 animate="visible"
                             >
+                                <p></p>
+                            </motion.div>
+                            <motion.div
+                                className="mb-8 text-lg space-y-1 font-poppins font-semibold"
+                                variants={fadeIn}
+                                initial="hidden"
+                                animate="visible"
+                            >
                                 <p>Dresscode</p>
                                 <p>Pesta Glamor</p>
                             </motion.div>
