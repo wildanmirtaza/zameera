@@ -476,7 +476,7 @@ function App() {
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.2 }}
                             >
-                                <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Venue</h2>
+                                <h2 className="text-3xl font-semibold text-white-400 mb-4">Venue</h2>
                                 <p className="text-white mt-3">Alun-Alun Simpang 7 Kudus</p>
                                 <p className="text-white font-semibold mt-3"></p>
                                 <div className="animate-zoom-in">
