@@ -379,6 +379,7 @@ function App() {
                             >
                                 <p>Minggu, 9 November 2025</p>
                                 <p>18.00 WIB - Selesai</p>
+                                <p>Alun-Alun Simpang 7 Kudus</p>
                             </motion.div>
                             <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
