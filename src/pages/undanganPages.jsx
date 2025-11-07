@@ -372,6 +372,22 @@ function App() {
                                 animate="visible"
                             />
                             <motion.div
+                                className="text-center"
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: {
+                                        opacity: 1,
+                                        y: 100,
+                                        transition: { duration: 0.5, delay: 0.2 }
+                                    },
+                                }}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <h2 className="text-xl font-semibold text-yellow-400 mb-4">200 penonton pertama mendapatkan souvenir dari Nadheera Luxury</h2>
+                            </motion.div>
+                            <motion.div
                                 className="mb-8 text-lg space-y-1 font-poppins font-semibold"
                                 variants={fadeIn}
                                 initial="hidden"
